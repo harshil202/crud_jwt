@@ -18,6 +18,7 @@ db.sequelize.sync().then(() => {
 
 app.use("/api", userRoutes)
 
+//start the server
 app.listen(3000, () =>{
-    console.log("Server is running on port 3000")
+    console.log("Server is running on port 3000") 
 })
