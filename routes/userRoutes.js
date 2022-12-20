@@ -13,6 +13,12 @@ router.get("/",(req, res) =>{
         msg: "WOrking"
     })
 })
+
+router.get("/tp",(req, res) =>{
+    res.json({
+        msg: "WOrking"
+    })
+})
 router.post("/user",addUser)
 router.post("/user/login", loginUser)
 router.delete("/user/project/:id", passport.authenticate('jwt', {session: false}), deleteProject)
