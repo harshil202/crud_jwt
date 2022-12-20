@@ -8,6 +8,11 @@ const updateProject = require("../controllers/editProject")
 const passport = require('passport')
 const router = express.Router()
 
+router.get("/",(req, res) =>{
+    res.json({
+        msg: "WOrking"
+    })
+})
 router.post("/user",addUser)
 router.post("/user/login", loginUser)
 router.delete("/user/project/:id", passport.authenticate('jwt', {session: false}), deleteProject)
